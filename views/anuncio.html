@@ -1,21 +1,22 @@
 <!DOCTYPE html>
 <div>
+	{{anuncio}}
 	<div class="grid">
 		<div class="row cells3">
 			<div class="cell">
 				<h5>Nome</h5>
 				<div class="input-control text full-size">
-					<input type="text" autocomplete="off">
+					<input type="text" autocomplete="off" ng-model="anuncio.equipamento.nome">
 				</div>
 			</div>
 			<div class="cell">
 				<h5>Descrição</h5>
 				<div class="input-control textarea full-size">
-					<textarea></textarea>
+					<textarea ng-model="anuncio.equipamento.descricao"></textarea>
 				</div>
 			</div>
 			<div class="cell">
-				<h5>Tipo anuncio</h5>
+				<h5>Tipo anúncio</h5>
 				<label class="input-control radio">
                     <input type="radio" name="n1"/>
                     <span class="check"></span>
@@ -26,11 +27,20 @@
                     <span class="check"></span>
                     <span class="caption">Doar</span>
                 </label>
-                <label class="input-control radio">
+				<label class="input-control radio">
                     <input type="radio" name="n2"/>
                     <span class="check"></span>
                     <span class="caption">Vender</span>
                 </label>
+			</div>
+		</div>
+		<div class="row cells3">
+			<div class="cell">
+				<h5>Característica</h5>
+				<div class="input-control text" data-role="input">
+					<input type="text">
+					<button class="button"><span class="mif-plus"></span></button>
+				</div>
 			</div>
 		</div>
 	</div>
