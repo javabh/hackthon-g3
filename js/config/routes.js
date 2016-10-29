@@ -2,6 +2,7 @@
     'use strict';
 
     ng.module('rotas')
+
     .config(function ($stateProvider, $urlRouterProvider) {
         $stateProvider.state('anuncioForm', {
             url: '/anuncio',
