@@ -23,6 +23,11 @@
             url: '/pessoa',
             controller: 'PessoaCtrl',
             templateUrl: 'views/pessoa.html'
+        })
+        .state('loginForm', {
+            url: '/login',
+            controller: 'SistemaCtrl',
+            templateUrl: 'views/login.html'
         });
 
         $urlRouterProvider.when('', '/');
