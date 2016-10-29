@@ -7,19 +7,17 @@
   </div>
 </div>
 <div class="flex-grid flex-just-center">
-  <div ng-repeat='(key, value) in listaAnuncios | custom:search' ng-click="detalhes(key)">  
-    <div class="tile tile-big fg-white">
+  <div ng-repeat='(key, value) in listaAnuncios | custom:search' ng-click="detalhes(key)">
+    <div class="tile tile-big fg-green">
       <div class="tile-content slide-down-2">
         <div class="slide">
-         <img src="../img/mkt-meme-1.jpg" style="height: 100%; width: 100%" />
-       <div class="tile-label margin20"><h1>{{value.equipamento.nome}}</h1></div> 
+         <img ng-src="../img/{{value.equipamento.imagem}}" style="height: 100%; width: 100%" />
+       <div class="tile-label margin20"><h1>{{value.equipamento.nome}}</h1></div>
        </div>
        <div class="slide-over bg-green">
          <div class="margin20"><h1>{{value.equipamento.nome}}</h1> <h3>  {{value.equipamento.descricao}}</h3></div>
        </div>
      </div>
    </div>
- </div> 
+ </div>
 </div>
-
-
