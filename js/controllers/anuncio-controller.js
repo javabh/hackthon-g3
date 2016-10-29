@@ -57,6 +57,7 @@
                     _getAnuncio($stateParams.key);
                 } else {
                     _getAnuncios();
+
                 }
             });
 
