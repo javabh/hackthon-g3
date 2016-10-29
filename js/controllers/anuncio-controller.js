@@ -52,7 +52,6 @@
                 }
                 
                 $scope.anuncio.negociacoes.push($scope.negociacao);
-                $scope.editar()
             };
 
             $scope.salvarNegociacao = function () {
