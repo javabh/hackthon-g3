@@ -1,29 +1,25 @@
 <div class="flex-grid flex-just-center">
   <div class="flex-grid flex-just-center">
-    <!-- input with placeholder -->
-    <div class="flex-grid flex-just-center">
-      <div class="input-control text">
-        <input type="text" placeholder="pesquisar">
-      <!-- input with placeholder -->
-      <div class="flex-grid flex-just-center">
-        <div class="input-control text">
-          <input type="text" placeholder="pesquisar">
-          <br><br><br><br><br><br><br><br>
-          <input type="button" name="detalhes" ng-click='detalhes("-KVFPzZ7KatRK59pPYpg")' value="UAGDIUVHSUIDBVIUSDBUIVBSDIUVBUIDSVBUISDBVUISDBUIVBSDIUVBSDUIVBSUIDVBUISDVBUISDBVUIBSDUIVBSDIU">
-        </div>
-      </div>
-    </div>
-    <div class="grid no-margin-top">
-      <div class="row coll6">
-        <div class="cell">
-          <div class="image-container rounded bordered">
-            <img src="../img/mkt-meme-1.jpg" />
-          </div>
-          <div class="image-container rounded bordered">
-            <img src="../img/mkt-meme-1.jpg" />
-          </div>
-        </div>
-      </div>
+    <div class="input-control text big-input full-size" data-role="input">
+      <input type="text" ng-model='search'>
+      <button class="button"><span class="mif-search"></span></button>
     </div>
   </div>
 </div>
+
+<div class="flex-grid flex-just-center">
+  <div ng-repeat='(key, value) in listaAnuncios | filter:search' ng-click="detalhes(key)">  
+    <div class="tile tile-big">
+      <div class="tile-content slide-down-2">
+        <div class="slide">
+         <img src="../img/mkt-meme-1.jpg" />
+       </div>
+       <div class="slide-over">
+         <h3>{{value.equipamento.nome}}</h3> <h5>{{value.equipamento.descricao}}</h5>
+       </div>
+     </div>
+   </div>
+ </div> 
+</div>
+
+
