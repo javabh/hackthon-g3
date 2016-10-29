@@ -25,10 +25,23 @@
             },
             getAnuncio: function(key){
                 return $http.get('https://hackthon-g3.firebaseio.com/anuncio/'+ key + '.json');
-            }        
+            },        
             salvar: function (anuncio) {
                 return $http.post('https://hackthon-g3.firebaseio.com/anuncio.json', anuncio);
             },
+            editar: function (anuncio) {
+                return $http.put('https://hackthon-g3.firebaseio.com/anuncio.json', anuncio);
+            }                
+        }
+    })
+     .factory('EquipamentoService', function ($http) {
+        return {
+            getEquipamentos: function () {
+                return $http.get('https://hackthon-g3.firebaseio.com/equipamento.json');
+            },
+            getEquipamento: function(key){
+                return $http.get('https://hackthon-g3.firebaseio.com/anuncio/'+ key + '/equipamento.json');
+            },           
             editar: function (anuncio) {
                 return $http.put('https://hackthon-g3.firebaseio.com/anuncio.json', anuncio);
             }                
