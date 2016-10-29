@@ -1,4 +1,20 @@
 <div>
-TESTE
-{{key}}
+	<div class="grid no-margin-top">
+		<div class="row coll6">
+			<div class="cell">
+				<div class="image-container rounded bordered" style="width: 30%; height: 30%" style="float: left;">
+					<img src="../img/mkt-meme-1.jpg"/>
+				</div>
+				<div >
+					<h2>{{anuncio.equipamento.nome}}</h2>				
+					<h3>Descrição</h3>
+					{{anuncio.equipamento.descricao}}
+					<h3>Caracteristicas</h3>
+					<div ng-repeat='caracteristica in anuncio.equipamento.caracteristicas'>
+						{{caracteristica}}
+					</div>
+				</div>
+			</div>			
+		</div>
+	</div>
 </div>
