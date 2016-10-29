@@ -1,21 +1,21 @@
 <div class="flex-grid flex-just-center">
   <div class="flex-grid flex-just-center">
     <div class="input-control text big-input full-size" data-role="input">
-      <input type="text" ng-model='search'>
+      <input type="text" ng-model='search' placeholder="Pesquisar...">
       <button class="button"><span class="mif-search"></span></button>
     </div>
   </div>
 </div>
 
 <div class="flex-grid flex-just-center">
-  <div ng-repeat='(key, value) in listaAnuncios | filter:search' ng-click="detalhes(key)">  
+  <div ng-repeat='(key, value) in listaAnuncios | custom:search' ng-click="detalhes(key)">  
     <div class="tile tile-big">
       <div class="tile-content slide-down-2">
         <div class="slide">
-         <img src="../img/mkt-meme-1.jpg" />
+         <img src="../img/mkt-meme-1.jpg" style="height: 100%; width: 100%" />
        </div>
        <div class="slide-over">
-         <h3>{{value.equipamento.nome}}</h3> <h5>{{value.equipamento.descricao}}</h5>
+         <h3>{{value.equipamento.nome}}</h3> <h5>  {{value.equipamento.descricao}}</h5>
        </div>
      </div>
    </div>
