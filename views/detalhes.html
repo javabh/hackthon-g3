@@ -15,6 +15,21 @@
 				</div>
 			</div>
 			<div class="cell">
+				<div class="row cells3">
+					<button 
+						class="button large-button success full-size"
+						ng-if="anuncio.equipamento.disponibilidade.alugar">
+						Alugar
+					</button>
+					<button class="button large-button success full-size"
+						ng-if="anuncio.equipamento.disponibilidade.doar">
+						Doar
+					</button>
+					<button class="button large-button success full-size"
+						ng-if="anuncio.equipamento.disponibilidade.vender">
+						Vender
+					</button>
+				</div>
 				<h3>Caracteristicas</h3>
 				<ul class="simple-list large-bullet green-bullet">
 					<li ng-repeat='caracteristica in anuncio.equipamento.caracteristicas'>
