@@ -1,12 +1,18 @@
 
-(function(ng) {
+(function (ng) {
     'use strict';
 
     ng.module('controllers')
-        .controller('AnuncioCtrl', function($scope, $state, $stateParams, AnuncioService) {
+        .controller('AnuncioCtrl', function ($scope, $state, $stateParams, AnuncioService) {
 
-            $scope.salvar = function() {
-                AnuncioService.salvar($scope.anuncio).then(function(key) {
+            $scope.anuncio = {
+                equipamento: {
+                    caracteristicas: []
+                }
+            };
+
+            $scope.salvar = function () {
+                AnuncioService.salvar($scope.anuncio).then(function (key) {
                     if (key) {
                         $scope.anuncio = {};
                         alert('Salvo com sucesso.');
@@ -16,8 +22,8 @@
                 });
             };
 
-            $scope.editar = function() {
-                AnuncioService.editar($scope.anuncio).then(function(response) {
+            $scope.editar = function () {
+                AnuncioService.editar($scope.anuncio).then(function (response) {
                     if (key) {
                         _getAnuncio(key);
                         alert('Editado com sucesso.');
@@ -27,7 +33,7 @@
                 });
             };
 
-            $scope.detalhes = function(key) {
+            $scope.detalhes = function (key) {
                 $state.transitionTo('detalhesList', {
                     key: key
                 });
@@ -35,18 +41,18 @@
             };
 
             function _getAnuncio(key) {
-                AnuncioService.getAnuncio(key).then(function(response) {
+                AnuncioService.getAnuncio(key).then(function (response) {
                     $scope.anuncio = response.data;
                 });
             }
 
             function _getAnuncios() {
-                AnuncioService.getAnuncios().then(function(response) {
+                AnuncioService.getAnuncios().then(function (response) {
                     $scope.listaAnuncios = response.data;
                 });
             }
 
-            $scope.$on('$viewContentLoaded', function() {
+            $scope.$on('$viewContentLoaded', function () {
                 if ($stateParams.key) {
                     _getAnuncio($stateParams.key);
                 } else {
