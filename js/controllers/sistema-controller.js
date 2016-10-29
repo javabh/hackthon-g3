@@ -8,7 +8,7 @@
 		$scope.user = {}
 
 		$scope.login = function(){
-		
+		 $state.transitionTo('anuncioList');
 		};
 
 
