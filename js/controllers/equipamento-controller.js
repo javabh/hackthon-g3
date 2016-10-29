@@ -2,9 +2,7 @@
     'use strict';
 
     ng.module('controllers')
-            .controller('EquipamentoCtrl', function ($scope, PessoaService) {
-
-				
+            .controller('EquipamentoCtrl', function ($scope, PessoaService) {				
 				
 
             	function _getPessoas(){
