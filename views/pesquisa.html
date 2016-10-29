@@ -6,16 +6,16 @@
     </div>
   </div>
 </div>
-
 <div class="flex-grid flex-just-center">
   <div ng-repeat='(key, value) in listaAnuncios | custom:search' ng-click="detalhes(key)">  
-    <div class="tile tile-big">
+    <div class="tile tile-big fg-white">
       <div class="tile-content slide-down-2">
         <div class="slide">
          <img src="../img/mkt-meme-1.jpg" style="height: 100%; width: 100%" />
+       <div class="tile-label margin20"><h1>{{value.equipamento.nome}}</h1></div> 
        </div>
-       <div class="slide-over">
-         <h3>{{value.equipamento.nome}}</h3> <h5>  {{value.equipamento.descricao}}</h5>
+       <div class="slide-over bg-green">
+         <div class="margin20"><h1>{{value.equipamento.nome}}</h1> <h3>  {{value.equipamento.descricao}}</h3></div>
        </div>
      </div>
    </div>
