@@ -10,6 +10,9 @@
                     caracteristicas: []
                 }
             };
+            $scope.negociacao = {};
+            $scope.negociando = false;
+
 
             $scope.salvar = function () {
                 AnuncioService.salvar($scope.anuncio).then(function (key) {
@@ -37,7 +40,22 @@
                 $state.transitionTo('detalhesList', {
                     key: key
                 });
+            };
 
+            $scope.negociar = function (tipo) {
+                $scope.negociacao.tipo = tipo;
+                $scope.negociacao.data = new Date();
+                $scope.negociando = true;
+
+                if (!$scope.anuncio.negociacoes) {
+                    $scope.anuncio.negociacoes = [];
+                }
+                
+                $scope.anuncio.negociacoes.push($scope.negociacao);
+            };
+
+            $scope.salvarNegociacao = function () {
+                $scope.negociando = false;
             };
 
             function _getAnuncio(key) {
@@ -57,6 +75,7 @@
                     _getAnuncio($stateParams.key);
                 } else {
                     _getAnuncios();
+
                 }
             });
 

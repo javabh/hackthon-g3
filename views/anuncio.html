@@ -7,37 +7,39 @@
 	<hr class="thin bg-grayLighter">
 
 	<div class="grid">
-		<div class="row cells3">
+		<div class="row cells2">
 			<div class="cell">
 				<h5>Nome</h5>
 				<div class="input-control text full-size">
 					<input type="text" autocomplete="off" ng-model="anuncio.equipamento.nome">
 				</div>
+			</div>			
+			<div class="cell">
+				<h5>Tipo anúncio</h5>
+				<label class="input-control checkbox">
+					<input type="checkbox" name="tipo" ng-model="anuncio.equipamento.disponibilidade.alugar"/>
+					<span class="check"></span>
+					<span class="caption">Alugar</span>
+				</label>
+				<label class="input-control checkbox">
+					<input type="checkbox" name="tipo" ng-model="anuncio.equipamento.disponibilidade.doar"/>
+					<span class="check"></span>
+					<span class="caption">Doar</span>
+				</label>
+				<label class="input-control checkbox">
+					<input type="checkbox" name="tipo" ng-model="anuncio.equipamento.disponibilidade.vender"/>
+					<span class="check"></span>
+					<span class="caption">Vender</span>
+				</label>
 			</div>
+		</div>
+		<div class="row cells2">
 			<div class="cell">
 				<h5>Descrição</h5>
 				<div class="input-control textarea full-size">
 					<textarea ng-model="anuncio.equipamento.descricao"></textarea>
 				</div>
-			</div>
-			<div class="cell">
-				<h5>Tipo anúncio</h5>
-				<label class="input-control checkbox">
-                    <input type="checkbox" name="tipo" ng-model="anuncio.equipamento.disponibilidade.alugar"/>
-                    <span class="check"></span>
-                    <span class="caption">Alugar</span>
-                </label>
-				<label class="input-control checkbox">
-                    <input type="checkbox" name="tipo" ng-model="anuncio.equipamento.disponibilidade.doar"/>
-                    <span class="check"></span>
-                    <span class="caption">Doar</span>
-                </label>
-				<label class="input-control checkbox">
-                    <input type="checkbox" name="tipo" ng-model="anuncio.equipamento.disponibilidade.vender"/>
-                    <span class="check"></span>
-                    <span class="caption">Vender</span>
-                </label>
-			</div>
+			</div>			
 		</div>
 		<div class="row cells2">
 			<div class="cell">
@@ -49,8 +51,9 @@
 					</button>
 				</div>
 			</div>
+			
 		</div>
-		<div class="row cells4">
+		<div class="row cells3">
 			<div class="cell" ng-repeat="caracteristica in anuncio.equipamento.caracteristicas">
 				<div class="input-control text full-size" data-role="input">
 					<input type="text" ng-model="caracteristica" readonly>

@@ -8,19 +8,19 @@
       <div class="cell">
         <h5>Email</h5>
         <div class="input-control text full-size">
-          <input type="mail" placeholder="Email" autocomplete="off" ng-model="pessoa.email">
+          <input type="mail" placeholder="Email" ng-model='user.email' autocomplete="off" ng-model="pessoa.email">
         </div>
       </div>
       <div class="cell">
         <h5>Senha</h5>
         <div class="input-control password full-size">
-          <input type="password" placeholder="Senha" autocomplete="off" ng-model="pessoa.senha">
+          <input type="password" placeholder="Senha" ng-model='user.senha' autocomplete="off" ng-model="pessoa.senha">
         </div>
       </div>
     </div>
     <hr class="thin bg-grayLighter ">
     <div class="row ">
-      <button class="image-button success " ng-click="logar() ">
+      <button class="image-button success " ng-click="login() ">
         Entrar
         <span class="icon mif-plus bg-emerald "></span>
       </button>

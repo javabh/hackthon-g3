@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <script href="metro/js/global.js"></script>
+  <title>Katira</title>
 
   <link rel="stylesheet" type="text/css" href="metro/build/css/metro.min.css">
   <link rel="stylesheet" type="text/css" href="metro/build/css/metro-icons.min.css">
@@ -13,7 +14,7 @@
   <link rel="stylesheet" type="text/css" href="css/main.css">
   <script src="js/libs/angular.min.js"></script>
   <script src="js/libs/angular-ui-router.js"></script>
-  <script src="js/config/app.js"></script>
+    <script src="js/config/app.js"></script>
   <script src="js/config/routes.js"></script>
   <script src="js/config/services.js"></script>
 </head>
@@ -21,11 +22,14 @@
 <body>
   <header class="container">
       <div class="app-bar green">
-        <ul class="app-bar-menu">
-            <li><a href="#/">Nome do App</a></li>
+       <a class="app-bar-element" href="#/">Katira</a>
+         <span class="app-bar-divider"></span>
+        <ul class="app-bar-menu">            
             <li><a href="#/pessoa">Pessoa</a></li>
             <li><a href="#/anuncio">Anúncio</a></li>
+            
         </ul>
+         <a class="app-bar-element place-right" href="#/login" >Login</a>
       </div>
   </header>
 
