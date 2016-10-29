@@ -5,9 +5,9 @@
         "descricao": "Cadeira de rodas com encosto reclinável  e estrutura em aço cromado reforçada com duplo X.",
         "imagen": "cadeira_rodas.jpg",
         "disponibilidade": {
-            "vender":false,
-            "alugar":true,
-            "doar":false
+            "vender": false,
+            "alugar": true,
+            "doar": false
         },
         "caracteristicas": [
             "Encosto reclinável",
@@ -23,5 +23,16 @@
             "Apoios removíveis e eleváveis para os pés e pernas (SEF)",
             "Pneus traseiros em poliuretano, não furam e não esvaziam"
         ]
-    }
+    },
+    "negociacoes": [
+        {
+            "solicitante": "-KVFG6whLl8xow7KIOJN",
+            "data": "29/10/2016",
+            "periodo": {
+                "inicio": "29/10/2016",
+                "fim":"29/10/2017"
+            },
+            "tipo": "alugar"
+        }
+    ]
 }
