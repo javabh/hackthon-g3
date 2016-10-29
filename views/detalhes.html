@@ -7,7 +7,7 @@
 		<div class="cells2 row">
 			<div class="cell">
 				<div class="image-container rounded bordered" style="float: left;">
-					<img src="../img/mkt-meme-1.jpg" />
+					<img ng-src="../img/{{anuncio.equipamento.imagem}}" />
 				</div>
 				<div>
 					<h3>Descrição</h3>
@@ -32,14 +32,14 @@
 							<input type="text" autocomplete="off" ng-model="negociacao.periodo.fim">
 						</div>
 					</div>
-					<button 
+					<button
 						class="button large-button success full-size"
 						ng-click="salvarNegociacao()">
 						Confirmar
 					</button>
 				</div>
 				<div class="cell" ng-if="!negociando">
-					<button 
+					<button
 						class="button large-button success full-size"
 						ng-if="anuncio.equipamento.disponibilidade.alugar"
 						ng-click="negociar('alugar')">
