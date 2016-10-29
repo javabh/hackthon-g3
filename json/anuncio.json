@@ -1,0 +1,38 @@
+{
+    "proprietario": "-KVFG6whLl8xow7KIOJN",
+    "equipamento": {
+        "nome": "Cadeira de Rodas",
+        "descricao": "Cadeira de rodas com encosto reclinável  e estrutura em aço cromado reforçada com duplo X.",
+        "imagen": "cadeira_rodas.jpg",
+        "disponibilidade": {
+            "vender": false,
+            "alugar": true,
+            "doar": false
+        },
+        "caracteristicas": [
+            "Encosto reclinável",
+            "Estrutura em aço cromado reforçada com duplo X",
+            "Braços removíveis",
+            "Assento e encosto em courvin",
+            "Apoios almofadados para os braços",
+            "Rodas: traseiras 24\" , dianteiras 8\"",
+            "Largura do assento A=46 cm J= 40 cm",
+            "Cor cinza",
+            "Rodas dianteiras com pneus infláveis de 8\"",
+            "Freios nas rodas traseiras",
+            "Apoios removíveis e eleváveis para os pés e pernas (SEF)",
+            "Pneus traseiros em poliuretano, não furam e não esvaziam"
+        ]
+    },
+    "negociacoes": [
+        {
+            "solicitante": "-KVFG6whLl8xow7KIOJN",
+            "data": "29/10/2016",
+            "periodo": {
+                "inicio": "29/10/2016",
+                "fim":"29/10/2017"
+            },
+            "tipo": "alugar"
+        }
+    ]
+}

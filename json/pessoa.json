@@ -1,0 +1,10 @@
+{
+    "nome": "Maison Chaves",
+    "email": "maison@chaves.com",
+    "telefone": "31 3391-4017", 
+    "endereco":{
+        "logradouro":"Rua Padre Jose Maria de Man nº1631",
+        "bairro": "Monte Castelo",
+        "cidade": "Contagem"
+    }
+}
