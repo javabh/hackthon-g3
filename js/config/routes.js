@@ -4,12 +4,12 @@
     ng.module('rotas')
      .config(function ($stateProvider, $urlRouterProvider) {
         $stateProvider.state('equipamentoForm', {
-            url: '/equipamento/',
+            url: '/equipamento',
             controller: 'EquipamentoCtrl',
             templateUrl: 'views/equipamento.html'
         })
         .state('pessoaForm', {
-            url: '/pessoa/',
+            url: '/pessoa',
             controller: 'PessoaCtrl',
             templateUrl: 'views/pessoa.html'
         });
