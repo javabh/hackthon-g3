@@ -1,40 +1,61 @@
 <div>
-  <h1 class="text-light">
-  Pessoa
-  </h1>
+  <h1 class="text-light">Pessoa</h1>
   <hr class="thin bg-grayLighter">
-  <form>
-    <div class="row">
-      <div class="input-control text">
-        <input type="text" id="nome" name="nome" placeholder="nome">
+  <div class="grid">
+
+    <div class="row cells3">
+
+      <div class="cell">
+        <h5>Nome</h5>
+        <div class="input-control text full-size">
+          <input type="text" placeholder="Nome" autocomplete="off" ng-model="pessoa.nome">
+        </div>
       </div>
-    </div>
-    <div class="row">
-      <div class="input-control text">
-        <input type="text" id="email" nome="email" placeholder="email">
+
+      <div class="cell">
+        <h5>Email</h5>
+        <div class="input-control email full-size">
+          <input type="email" placeholder="Email" autocomplete="off" ng-model="pessoa.email">
+        </div>
       </div>
+
+      <div class="cell">
+        <h5>Senha</h5>
+        <div class="input-control password full-size">
+          <input type="password" placeholder="Senha" autocomplete="off" ng-model="pessoa.senha">
+        </div>
+      </div>
+
     </div>
+
+    <h3 class="text-light">Endereço</h3>
+    <hr class="thin bg-grayLighter">
+
     <div class="row">
-      <div class="input-control password">
-        <input type="password" id="senha" name="senha" placeholder="senha">
+      <h5>Logradouro</h5>
+      <div class="input-control text full-size">
+        <input type="text" placeholder="logradouro" autocomplete="off" ng-model="pessoa.endereco.logradouro">
       </div>
     </div>
 
-    <div class="row">
-      <div class="input-control text">
-        <input type="text" id="logradouro" name="logradouro" placeholder="logradouro">
+    <div class="row cells2">
+
+      <div class="cell">
+        <h5>Bairro</h5>
+        <div class="input-control text full-size">
+          <input type="text" placeholder="Bairro" autocomplete="off" ng-model="pessoa.endereco.bairro">
+        </div>
       </div>
-    </div>
-    <div class="row">
-      <div class="input-control text">
-        <input type="text" id="bairro" name="bairro" placeholder="bairro">
+
+      <div class="cell">
+        <h5>Cidade</h5>
+        <div class="input-control text full-size">
+          <input type="text" placeholder="Cidade" autocomplete="off" ng-model="pessoa.endereco.cidade">
+        </div>
       </div>
+
     </div>
-    <div class="row">
-      <div class="input-control text">
-        <input type="text" id="cidade" name="cidade" placeholder="cidade">
-      </div>
-    </div>
+
     <hr class="thin bg-grayLighter">
     <div class="row">
       <button class="image-button success" ng-click="salvar()">
@@ -42,8 +63,5 @@
         <span class="icon mif-plus bg-emerald"></span>
       </button>
     </div>
-    <!-- <div class="row">
-      <button class="button primary">Salvar</button>
-    </div> -->
-  </form>
+  </div>
 </div>
