@@ -9,6 +9,7 @@
 
   <link rel="stylesheet" type="text/css" href="metro/build/css/metro.min.css">
   <link rel="stylesheet" type="text/css" href="metro/build/css/metro-icons.min.css">
+  <link rel="stylesheet" type="text/css" href="metro/build/css/metro-schemes.min.css">
   <link rel="stylesheet" type="text/css" href="css/main.css">
   <script src="js/libs/angular.min.js"></script>
   <script src="js/libs/angular-ui-router.js"></script>
@@ -19,10 +20,15 @@
 
 <body>
   <header class="container">
-      <a href="#/">
-          <h1>Nome do App</h1>
-      </a>
+      <div class="app-bar green">
+        <ul class="app-bar-menu">
+            <li><a href="#/">Nome do App</a></li>
+            <li><a href="#/pessoa">Pessoa</a></li>
+            <li><a href="#/anuncio">Anúncio</a></li>
+        </ul>
+      </div>
   </header>
+
   <main class="container">
     <div ui-view></div>
   </main>
