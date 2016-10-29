@@ -14,19 +14,41 @@
 					{{anuncio.equipamento.descricao}}
 				</div>
 			</div>
-			<div class="cell">
-				<div class="row cells3">
+			<div class="cell" >
+				<div class="cell" ng-if="negociando">
+					<div class="cell">
+						<h5>Inicio</h5>
+						<div class="input-control text full-size">
+							<input type="text" autocomplete="off" ng-model="negociacao.periodo.inicio">
+						</div>
+					</div>
+					<div class="cell">
+						<h5>Fim</h5>
+						<div class="input-control text full-size">
+							<input type="text" autocomplete="off" ng-model="negociacao.periodo.fim">
+						</div>
+					</div>
 					<button 
 						class="button large-button success full-size"
-						ng-if="anuncio.equipamento.disponibilidade.alugar">
+						ng-click="salvarNegociacao()">
+						Confirmar
+					</button>
+				</div>
+				<div class="cell" ng-if="!negociando">
+					<button 
+						class="button large-button success full-size"
+						ng-if="anuncio.equipamento.disponibilidade.alugar"
+						ng-click="negociar('alugar')">
 						Alugar
 					</button>
 					<button class="button large-button success full-size"
-						ng-if="anuncio.equipamento.disponibilidade.doar">
+						ng-if="anuncio.equipamento.disponibilidade.doar"
+						ng-click="negociar('doar')">
 						Doar
 					</button>
 					<button class="button large-button success full-size"
-						ng-if="anuncio.equipamento.disponibilidade.vender">
+						ng-if="anuncio.equipamento.disponibilidade.vender"
+						ng-click="negociar('vender')">
 						Vender
 					</button>
 				</div>
