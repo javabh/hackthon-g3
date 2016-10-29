@@ -32,6 +32,7 @@
 
         $urlRouterProvider.when('', '/');
     });
+    
 
 })(angular);
 
