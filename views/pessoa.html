@@ -1,5 +1,8 @@
 <div>
-  <h2>Pessoa</h2>
+  <h1 class="text-light">
+  Pessoa
+  </h1>
+  <hr class="thin bg-grayLighter">
   <form>
     <div class="row">
       <div class="input-control text">
@@ -32,8 +35,15 @@
         <input type="text" id="cidade" name="cidade" placeholder="cidade">
       </div>
     </div>
+    <hr class="thin bg-grayLighter">
     <div class="row">
-      <button class="button primary">Salvar</button>
+      <button class="image-button success" ng-click="salvar()">
+        Salvar
+        <span class="icon mif-plus bg-emerald"></span>
+      </button>
     </div>
+    <!-- <div class="row">
+      <button class="button primary">Salvar</button>
+    </div> -->
   </form>
 </div>
